@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     onUpdateTodo: (viewId, content) => {
       const todo = todoAPI.updateItemContent(viewId, content);
+      console.log(viewId);
       dispatch(editItem(todo));
     }
   };

@@ -18,6 +18,7 @@ export default (
     }
     case types.CHECKITEM: {
       console.log(action.todo);
+
       return {
         ...state,
         todos: state.todos.map(
@@ -26,6 +27,7 @@ export default (
       };
     }
     case types.EDITITEM: {
+      console.log(action.todos);
       return {
         ...state,
         todos: state.todos.map(

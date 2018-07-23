@@ -18,7 +18,7 @@ export default class TodoList extends Component {
                   this.props.onToggleTodo(viewId, this.props.status)
                 }
                 updateItemContent={(viewId, content) =>
-                  this.props.updateItemContent(viewId, content)
+                  this.props.onUpdateTodo(viewId, content)
                 }
               />
             ));
