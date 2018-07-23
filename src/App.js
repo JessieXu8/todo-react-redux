@@ -14,7 +14,6 @@ class App extends Component {
       todos: [],
       statusOfList: Todo.ALL
     };
-    console.log('1111111111');
   }
 
   componentDidMount() {
@@ -24,7 +23,7 @@ class App extends Component {
   }
 
   add(event) {
-    if (event.keyCode === 13) {
+    if (event.keycode === 13) {
       this.todosAPI.add(new Todo(this.refs.newItem.value));
       const todos = this.deepCopy(
         this.todosAPI.filerByStatus(this.state.statusOfList)
