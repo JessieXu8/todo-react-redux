@@ -1,9 +1,10 @@
 import Todo from '../model/Todo';
 
-const todosAPI = {
+const todoAPI = {
   todos: [],
   add(item) {
     this.todos.push(item);
+    console.log(this.todos);
   },
   filerByStatus(status) {
     if (status === Todo.ALL) {
@@ -24,4 +25,4 @@ const todosAPI = {
     }
   }
 };
-export default todosAPI;
+export default todoAPI;

@@ -4,6 +4,7 @@ import Todo from './model/Todo';
 import TodoItem from './component/TodoItem';
 import classNames from 'classnames';
 import todosAPI from './api/TodoResourseAPI';
+import AddItemContainer from './container/AddItemContainer';
 
 class App extends Component {
   constructor(props) {
@@ -59,6 +60,8 @@ class App extends Component {
             <em>Simple Todo List with adding and filter by diff status.</em>
           </p>
         </div>
+
+        <AddItemContainer />
 
         <div>
           <ol>

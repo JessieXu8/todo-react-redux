@@ -3,11 +3,17 @@ import Todo from '../model/Todo';
 import '../App.css';
 
 export default class AddItem extends Component {
+  constructor(props) {
+    super(props);
+    this.newItem = React.createRef();
+  }
   add = () => {
     const todo = new Todo(this.refs.newItem.value);
     this.props.onAddItem(todo);
+
     this.refs.newItem.value = '';
   };
+
   render() {
     return (
       <div>
