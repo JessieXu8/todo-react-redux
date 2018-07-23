@@ -22,18 +22,6 @@ class App extends Component {
     });
   }
 
-  add(event) {
-    if (event.keycode === 13) {
-      this.todosAPI.add(new Todo(this.refs.newItem.value));
-      const todos = this.deepCopy(
-        this.todosAPI.filerByStatus(this.state.statusOfList)
-      );
-      this.setState({ todos });
-      this.refs.newItem.value = '';
-      console.log(todos);
-    }
-  }
-
   toggleActive(viewId) {
     this.todosAPI.toggleActive(viewId);
     const todos = this.deepCopy(
@@ -71,17 +59,7 @@ class App extends Component {
             <em>Simple Todo List with adding and filter by diff status.</em>
           </p>
         </div>
-        <div>
-          <input
-            className="input-text"
-            onKeyUp={e => this.add(e)}
-            id="todo-creator"
-            ref="newItem"
-          />
-          <div className="button" onClick={e => this.add()}>
-            Add
-          </div>
-        </div>
+
         <div>
           <ol>
             {(() => {
